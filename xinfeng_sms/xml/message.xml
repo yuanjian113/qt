@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<SmsCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <SmsSum term="信息">
+        <Sms>
+            <Number term="收到">12</Number>
+            <Content>Test</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">126</Number>
+            <Content>Test6</Content>
+        </Sms>
+        <Sms>
+            <Number term="收到">34</Number>
+            <Content>qq6</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">12</Number>
+            <Content>Tes77</Content>
+        </Sms>
+        <Sms>
+            <Number term="收到">12</Number>
+            <Content>hello</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">34</Number>
+            <Content>q5q</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">126</Number>
+            <Content>Tes5t6</Content>
+        </Sms>
+        <Sms>
+            <Number term="收到">34</Number>
+            <Content>qq56</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">12</Number>
+            <Content>Tes577</Content>
+        </Sms>
+        <Sms>
+            <Number term="收到">recover</Number>
+            <Content>recover</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">18858593212</Number>
+            <Content>qq8</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">34</Number>
+            <Content>dsfsd</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">348</Number>
+            <Content>你好？</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">348</Number>
+            <Content>你好？</Content>
+        </Sms>
+        <Sms>
+            <Number>1234</Number>
+            <Content>Test1234</Content>
+        </Sms>
+        <Sms>
+            <Number>5678</Number>
+            <Content>Test5678</Content>
+        </Sms>
+        <Sms>
+            <Number>1357</Number>
+            <Content>只是测试</Content>
+        </Sms>
+        <Sms>
+            <Number>565</Number>
+            <Content>测试一下</Content>
+        </Sms>
+        <Sms>
+            <Number>565</Number>
+            <Content>公安部反洗钱中心通知您，您的账号近日有大额异动，已经处于监控之下。</Content>
+        </Sms>
+        <Sms>
+            <Number>1234</Number>
+            <Content>Test1234</Content>
+        </Sms>
+        <Sms>
+            <Number>5678</Number>
+            <Content>Test5678</Content>
+        </Sms>
+        <Sms>
+            <Number>1357</Number>
+            <Content>只是测试</Content>
+        </Sms>
+        <Sms>
+            <Number>565</Number>
+            <Content>测试一下</Content>
+        </Sms>
+        <Sms>
+            <Number>565</Number>
+            <Content>公安部反洗钱中心通知您，您的账号近日有大额异动，已经处于监控之下。</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">李贺</Number>
+            <Content>sldfj</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">李贺</Number>
+            <Content>123</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">李贺</Number>
+            <Content>你好</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">李贺</Number>
+            <Content>hello 你</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">12</Number>
+            <Content>1</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">远建</Number>
+            <Content/>
+        </Sms>
+        <Sms>
+            <Number term="发送">18858298271</Number>
+            <Content>hello</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">远建</Number>
+            <Content>qdddq7</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">远建</Number>
+            <Content>qdddq7</Content>
+        </Sms>
+        <Sms>
+            <Number term="发送">远建</Number>
+            <Content>qdddq7</Content>
+        </Sms>
+    </SmsSum>
+    <SmsSum term="草稿箱">
+        <Sms>
+            <Number>127</Number>
+            <Content>Test47</Content>
+        </Sms>
+        <Sms>
+            <Number/>
+            <Content>qdddq7</Content>
+        </Sms>
+        <Sms>
+            <Number>15829820001</Number>
+            <Content>Test8</Content>
+        </Sms>
+        <Sms>
+            <Number>15829820001</Number>
+            <Content>Test8</Content>
+        </Sms>
+        <Sms>
+            <Number/>
+            <Content>qdddq7</Content>
+        </Sms>
+    </SmsSum>
+    <SmsSum term="垃圾箱">
+        <Sms>
+            <Number>34</Number>
+            <Content>dsfsd</Content>
+        </Sms>
+        <Sms>
+            <Number>15829820001</Number>
+            <Content>Test8</Content>
+        </Sms>
+        <Sms>
+            <Number>34</Number>
+            <Content>qq</Content>
+        </Sms>
+    </SmsSum>
+</SmsCollection>

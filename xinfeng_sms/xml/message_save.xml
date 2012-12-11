@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SmsCollection>
+    <SmsSum term="草稿箱">
+        <Sms>
+            <Number>127</Number>
+            <Content>Test47</Content>
+        </Sms>
+        <Sms>
+            <Number></Number>
+            <Content>qdddq7</Content>
+        </Sms>
+        <Sms>
+            <Number>15829820001</Number>
+            <Content>Test8</Content>
+        </Sms>
+        <Sms>
+            <Number>15829820001</Number>
+            <Content>Test8</Content>
+        </Sms>
+        <Sms>
+            <Number></Number>
+            <Content>qdddq7</Content>
+        </Sms>
+    </SmsSum>
+    <SmsSum term="垃圾箱">
+        <Sms>
+            <Number>34</Number>
+            <Content>dsfsd</Content>
+        </Sms>
+        <Sms>
+            <Number>15829820001</Number>
+            <Content>Test8</Content>
+        </Sms>
+        <Sms>
+            <Number>34</Number>
+            <Content>qq</Content>
+        </Sms>
+    </SmsSum>
+</SmsCollection>
