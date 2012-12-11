@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/Draftsimage.png</file>
+    <file>images/Dustbinimage.png</file>
+    <file>images/Inboximage.png</file>
+    <file>images/Sendimage.png</file>
+</qresource>
+</RCC>

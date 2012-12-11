@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>QSimpleDownloader: E:/eclipse/workspace/QSimpleDownloader/src/OptionDlg.cpp源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.5.9 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<h1>E:/eclipse/workspace/QSimpleDownloader/src/OptionDlg.cpp</h1><a href="a00015.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * OptionDlg.cpp</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> *  Created on: 2009-5-15</span>
+<a name="l00005"></a>00005 <span class="comment"> *      Author: szf</span>
+<a name="l00006"></a>00006 <span class="comment"> */</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtXml&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="a00016.html">OptionDlg.h</a>"</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a><a class="code" href="a00004.html#296df22412e29bb57e7963c7d36244ec">00012</a> <a class="code" href="a00004.html#296df22412e29bb57e7963c7d36244ec">OptionDlg::OptionDlg</a>(QWidget *parent)
+<a name="l00013"></a>00013 {
+<a name="l00014"></a>00014     readConfigure(<span class="stringliteral">"etc/conf.xml"</span>);
+<a name="l00015"></a>00015     readTargets(<span class="stringliteral">"etc/targets.xml"</span>);
+<a name="l00016"></a>00016 }
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keywordtype">bool</span> OptionDlg::readConfigure(<span class="keyword">const</span> QString &amp;fileName)
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 }
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keywordtype">bool</span> OptionDlg::readTargets(<span class="keyword">const</span> QString &amp;fileName)
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025     QFile file(fileName);
+<a name="l00026"></a>00026     <span class="keywordflow">if</span> (!file.open(QFile::ReadOnly | QFile::Text)) {
+<a name="l00027"></a>00027         std::cerr &lt;&lt; <span class="stringliteral">"Error: Cannot read file "</span> &lt;&lt; qPrintable(fileName)
+<a name="l00028"></a>00028                   &lt;&lt; <span class="stringliteral">": "</span> &lt;&lt; qPrintable(file.errorString())
+<a name="l00029"></a>00029                   &lt;&lt; std::endl;
+<a name="l00030"></a>00030         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00031"></a>00031     }
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033     QString errorStr;
+<a name="l00034"></a>00034     <span class="keywordtype">int</span> errorLine;
+<a name="l00035"></a>00035     <span class="keywordtype">int</span> errorColumn;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037     QDomDocument doc;
+<a name="l00038"></a>00038     <span class="keywordflow">if</span>(!doc.setContent(&amp;file, &amp;errorStr, &amp;errorLine, &amp;errorColumn)) {
+<a name="l00039"></a>00039         std::cerr &lt;&lt; <span class="stringliteral">"Error: Parse error at line "</span> &lt;&lt; errorLine &lt;&lt; <span class="stringliteral">", "</span>
+<a name="l00040"></a>00040                   &lt;&lt; <span class="stringliteral">"column "</span> &lt;&lt; errorColumn &lt;&lt; <span class="stringliteral">": "</span>
+<a name="l00041"></a>00041                   &lt;&lt; qPrintable(errorStr) &lt;&lt; std::endl;
+<a name="l00042"></a>00042         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00043"></a>00043     }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045     QDomElement root = doc.documentElement();
+<a name="l00046"></a>00046     <span class="keywordflow">if</span> (root.tagName() != <span class="stringliteral">"targets"</span>) {
+<a name="l00047"></a>00047         std::cerr &lt;&lt; <span class="stringliteral">"Error: Not a targets file"</span> &lt;&lt; std::endl;
+<a name="l00048"></a>00048         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00049"></a>00049     }
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051     QDomNode child = root.firstChild();
+<a name="l00052"></a>00052     <span class="keywordflow">while</span> (!child.isNull()) {
+<a name="l00053"></a>00053         <span class="keywordflow">if</span> (child.toElement().tagName() == <span class="stringliteral">"target"</span>) {
+<a name="l00054"></a>00054             parseTargetElement(child.toElement());
+<a name="l00055"></a>00055         }
+<a name="l00056"></a>00056         child = child.nextSibling();
+<a name="l00057"></a>00057     }
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059     <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00060"></a>00060 }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="keywordtype">void</span> OptionDlg::parseTargetElement(<span class="keyword">const</span> QDomElement &amp;element)
+<a name="l00063"></a>00063 {
+<a name="l00064"></a>00064     <a class="code" href="a00007.html">Target</a> target;
+<a name="l00065"></a>00065     target.<a class="code" href="a00007.html#bc7ec3ba3fe2e4837eba523f5abe6cfb">desc</a> = element.attribute(<span class="stringliteral">"desc"</span>, <span class="stringliteral">"no desc"</span>);
+<a name="l00066"></a>00066     target.<a class="code" href="a00007.html#953aa6d7478413e5620c205246facec8">selected</a> = (element.attribute(<span class="stringliteral">"selected"</span>) == <span class="stringliteral">"true"</span>);
+<a name="l00067"></a>00067     QDomNode child = element.firstChild();
+<a name="l00068"></a>00068     <span class="keywordflow">while</span>(!child.isNull()) {
+<a name="l00069"></a>00069         <span class="keywordflow">if</span>(child.toElement().tagName() == <span class="stringliteral">"tag"</span>) {
+<a name="l00070"></a>00070             target.<a class="code" href="a00007.html#b71afe3865e509a0d3f506540f3411a4">tag</a> = child.toElement().text();
+<a name="l00071"></a>00071         }
+<a name="l00072"></a>00072         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(child.toElement().tagName() == <span class="stringliteral">"attr"</span>) {
+<a name="l00073"></a>00073             target.<a class="code" href="a00007.html#64f58bdc4eea8f707d4e38d81e648e94">attr</a> = child.toElement().text();
+<a name="l00074"></a>00074         }
+<a name="l00075"></a>00075         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(child.toElement().tagName() == <span class="stringliteral">"exts"</span>) {
+<a name="l00076"></a>00076             target.<a class="code" href="a00007.html#e1e5c588c2f1126add987b0c31153576">exts</a> = child.toElement().text().split(<span class="charliteral">';'</span>);
+<a name="l00077"></a>00077         }
+<a name="l00078"></a>00078         child = child.nextSibling();
+<a name="l00079"></a>00079     }
+<a name="l00080"></a>00080     targets.push_back(target);
+<a name="l00081"></a>00081 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generated at Fri May 15 20:00:03 2009 for QSimpleDownloader by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.9 </small></address>
+</body>
+</html>

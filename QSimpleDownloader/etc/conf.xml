@@ -1,0 +1,13 @@
+<?xml version="1.0"  encoding="gb2312"?>
+<configure>
+	<RecursiveLayer>3</RecursiveLayer>
+	<MinFileSize>20</MinFileSize>
+	<SaveInSingleDir>true</SaveInSingleDir>
+	<FileExistsAction>Overwrite</FileExistsAction>
+	<Proxy useProxy="true">
+		<Host>127.0.0.1</Host>
+		<Port>8090</Port>
+		<Username>abc</Username>
+		<Password>f</Password>
+	</Proxy>
+</configure>

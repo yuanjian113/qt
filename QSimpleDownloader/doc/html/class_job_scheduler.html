@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>QSimpleDownloader: JobScheduler类参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.5.9 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>组合类型列表</span></a></li>
+      <li><a href="functions.html"><span>组合类型成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>JobScheduler类参考</h1><!-- doxytag: class="JobScheduler" --><code>#include &lt;<a class="el" href="_job_scheduler_8h_source.html">JobScheduler.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+JobScheduler合作图：</div>
+<div class="dynsection">
+<p><center><img src="class_job_scheduler__coll__graph.png" border="0" usemap="#_job_scheduler__coll__map" alt="Collaboration graph"></center>
+<map name="_job_scheduler__coll__map">
+<area shape="rect" id="node2" href="class_http_get.html" title="{HttpGet\n|&#45; http\l&#45; file\l&#45; downloading\l|+ HttpGet()\l+ getFile()\l+ stop()\l+ isDownloading()\l&#45; httpDone()\l}" alt="" coords="5,118,128,295"><area shape="rect" id="node4" href="class_html_parser.html" title="{HtmlParser\n|&#45; layer\l&#45; host\l&#45; dir\l&#45; targets\l&#45; sameHostLink\l&#45; http\l&#45; buffer\l&#45; targetUrls\l&#45; links\l&#45; parsing\l|+ HtmlParser()\l+ ~HtmlParser()\l+ parse()\l+ getTargetUrls()\l+ getLinks()\l+ getLayer()\l+ stop()\l+ isParsing()\l&#45; parseString()\l&#45; trimQuote()\l&#45; endsWithAnyExt()\l&#45; httpDone()\l}" alt="" coords="152,6,288,407"></map>
+<center><font size="2">[<a href="graph_legend.html">图例</a>]</font></center></div>
+
+<p>
+<a href="class_job_scheduler-members.html">所有成员的列表。</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>公有类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_job_scheduler.html#b917978498f3c3997902f0cc1a7b0604">FileExistsAction</a> { <a class="el" href="class_job_scheduler.html#b917978498f3c3997902f0cc1a7b0604f01ed9bdcd63680c62b188c27410638b">feaOverwrite</a>, 
+<a class="el" href="class_job_scheduler.html#b917978498f3c3997902f0cc1a7b060467e5d52691221511a6f33325b39420b5">feaIgnore</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">目标文件已存在时采取措施  <a href="class_job_scheduler.html#b917978498f3c3997902f0cc1a7b0604">更多...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_job_scheduler.html#c495f9ceeb544964cb20e534dea95bd5">JobScheduler</a> (QObject *parent=0)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_job_scheduler.html#ac265fff586a50bf838cf74541eedd20">start</a> (const QString &amp;url, const QString &amp;dir, int layer, const std::vector&lt; <a class="el" href="structtag_target.html">Target</a> &gt; &amp;targets)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_job_scheduler.html#c22baf7d567e61df66d368f4a32768c6">stop</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_job_scheduler.html#2621e94e99c80e3a107b6eb4b9f4ecfe">isRunning</a> () const </td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>详细描述</h2>
+
+<p>在文件<a class="el" href="_job_scheduler_8h_source.html">JobScheduler.h</a>第<a class="el" href="_job_scheduler_8h_source.html#l00029">29</a>行定义。</p>
+<hr><h2>成员枚举类型文档</h2>
+<a class="anchor" name="b917978498f3c3997902f0cc1a7b0604"></a><!-- doxytag: member="JobScheduler::FileExistsAction" ref="b917978498f3c3997902f0cc1a7b0604" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_job_scheduler.html#b917978498f3c3997902f0cc1a7b0604">JobScheduler::FileExistsAction</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+目标文件已存在时采取措施 
+<p>
+<dl compact><dt><b>枚举值: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="b917978498f3c3997902f0cc1a7b0604f01ed9bdcd63680c62b188c27410638b"></a><!-- doxytag: member="feaOverwrite" ref="b917978498f3c3997902f0cc1a7b0604f01ed9bdcd63680c62b188c27410638b" args="" -->feaOverwrite</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" name="b917978498f3c3997902f0cc1a7b060467e5d52691221511a6f33325b39420b5"></a><!-- doxytag: member="feaIgnore" ref="b917978498f3c3997902f0cc1a7b060467e5d52691221511a6f33325b39420b5" args="" -->feaIgnore</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+
+<p>在文件<a class="el" href="_job_scheduler_8h_source.html">JobScheduler.h</a>第<a class="el" href="_job_scheduler_8h_source.html#l00036">36</a>行定义。</p>
+
+</div>
+</div><p>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="c495f9ceeb544964cb20e534dea95bd5"></a><!-- doxytag: member="JobScheduler::JobScheduler" ref="c495f9ceeb544964cb20e534dea95bd5" args="(QObject *parent=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JobScheduler::JobScheduler           </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&nbsp;</td>
+          <td class="paramname"> <em>parent</em> = <code>0</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>在文件<a class="el" href="_job_scheduler_8cpp_source.html">JobScheduler.cpp</a>第<a class="el" href="_job_scheduler_8cpp_source.html#l00012">12</a>行定义。</p>
+
+</div>
+</div><p>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="2621e94e99c80e3a107b6eb4b9f4ecfe"></a><!-- doxytag: member="JobScheduler::isRunning" ref="2621e94e99c80e3a107b6eb4b9f4ecfe" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JobScheduler::isRunning           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>在文件<a class="el" href="_job_scheduler_8h_source.html">JobScheduler.h</a>第<a class="el" href="_job_scheduler_8h_source.html#l00045">45</a>行定义。</p>
+
+</div>
+</div><p>
+<a class="anchor" name="ac265fff586a50bf838cf74541eedd20"></a><!-- doxytag: member="JobScheduler::start" ref="ac265fff586a50bf838cf74541eedd20" args="(const QString &amp;url, const QString &amp;dir, int layer, const std::vector&lt; Target &gt; &amp;targets)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JobScheduler::start           </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structtag_target.html">Target</a> &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>targets</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>在文件<a class="el" href="_job_scheduler_8cpp_source.html">JobScheduler.cpp</a>第<a class="el" href="_job_scheduler_8cpp_source.html#l00020">20</a>行定义。</p>
+
+</div>
+</div><p>
+<a class="anchor" name="c22baf7d567e61df66d368f4a32768c6"></a><!-- doxytag: member="JobScheduler::stop" ref="c22baf7d567e61df66d368f4a32768c6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JobScheduler::stop           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>在文件<a class="el" href="_job_scheduler_8cpp_source.html">JobScheduler.cpp</a>第<a class="el" href="_job_scheduler_8cpp_source.html#l00034">34</a>行定义。</p>
+
+</div>
+</div><p>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="_job_scheduler_8h_source.html">JobScheduler.h</a><li><a class="el" href="_job_scheduler_8cpp_source.html">JobScheduler.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated at Fri May 15 21:28:14 2009 for QSimpleDownloader by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.9 </small></address>
+</body>
+</html>

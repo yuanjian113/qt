@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>QSimpleDownloader: E:/eclipse/workspace/QSimpleDownloader/src/HtmlParser.cpp源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.5.9 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<h1>E:/eclipse/workspace/QSimpleDownloader/src/HtmlParser.cpp</h1><a href="a00008.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * HtmlParser.cpp</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> *  Created on: 2009-4-12</span>
+<a name="l00005"></a>00005 <span class="comment"> *      Author: szf</span>
+<a name="l00006"></a>00006 <span class="comment"> */</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtNetwork&gt;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="a00009.html">HtmlParser.h</a>"</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="a00001.html#6d9ea3817aec06690bfbcd9239c4fc3a">00011</a> <a class="code" href="a00001.html#6d9ea3817aec06690bfbcd9239c4fc3a">HtmlParser::HtmlParser</a>(QObject *parent)
+<a name="l00012"></a>00012     : QObject(parent)
+<a name="l00013"></a>00013 {
+<a name="l00014"></a>00014     buffer = <span class="keyword">new</span> QBuffer;
+<a name="l00015"></a>00015     parsing = <span class="keyword">false</span>;
+<a name="l00016"></a>00016     connect(&amp;http, SIGNAL(<a class="code" href="a00001.html#d18e302aa726419728dc3e28fafeb0cc">done</a>(<span class="keywordtype">bool</span>)), <span class="keyword">this</span>, SLOT(httpDone(<span class="keywordtype">bool</span>)));
+<a name="l00017"></a>00017 }
+<a name="l00018"></a>00018 
+<a name="l00020"></a><a class="code" href="a00001.html#54e6e1c11d758aca2b0e43c72d41a52c">00020</a> <span class="keywordtype">bool</span> <a class="code" href="a00001.html#54e6e1c11d758aca2b0e43c72d41a52c" title="解析html">HtmlParser::parse</a>(<span class="keywordtype">int</span> layer, <span class="keyword">const</span> QString &amp;url, std::vector&lt;Target&gt; &amp;targets,
+<a name="l00021"></a>00021         <span class="keywordtype">bool</span> sameHostLink)
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023     parsing = <span class="keyword">true</span>;
+<a name="l00024"></a>00024     QUrl qUrl(url);
+<a name="l00025"></a>00025     <span class="keywordflow">if</span>(!qUrl.isValid()) {
+<a name="l00026"></a>00026         logger()-&gt;error(<span class="stringliteral">"Error: Invalid URL"</span>);
+<a name="l00027"></a>00027         parsing = <span class="keyword">false</span>;
+<a name="l00028"></a>00028         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00029"></a>00029     }
+<a name="l00030"></a>00030     <span class="keywordflow">if</span>(qUrl.scheme() != <span class="stringliteral">"http"</span>) {
+<a name="l00031"></a>00031         logger()-&gt;error(<span class="stringliteral">"Error: URL must start with 'http:'"</span>);
+<a name="l00032"></a>00032         parsing = <span class="keyword">false</span>;
+<a name="l00033"></a>00033         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00034"></a>00034     }
+<a name="l00035"></a>00035     <span class="keywordflow">if</span>(qUrl.path().isEmpty()) {
+<a name="l00036"></a>00036         qUrl.setPath(<span class="stringliteral">"/"</span>);
+<a name="l00037"></a>00037     }
+<a name="l00038"></a>00038     this-&gt;host = QString(<span class="stringliteral">"http://%1"</span>).arg(qUrl.host());
+<a name="l00039"></a>00039     this-&gt;dir = this-&gt;host + QFileInfo(qUrl.path()).path();
+<a name="l00040"></a>00040     <span class="keywordflow">if</span>(!this-&gt;dir.endsWith(<span class="charliteral">'/'</span>))
+<a name="l00041"></a>00041         this-&gt;dir += <span class="stringliteral">"/"</span>;
+<a name="l00042"></a>00042     this-&gt;targets = targets;
+<a name="l00043"></a>00043     this-&gt;layer = layer;
+<a name="l00044"></a>00044     this-&gt;sameHostLink = sameHostLink;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046     http.setHost(qUrl.host(), qUrl.port(80));
+<a name="l00047"></a>00047     buffer-&gt;open(QIODevice::WriteOnly);
+<a name="l00048"></a>00048     http.get(qUrl.path(), buffer);
+<a name="l00049"></a>00049     http.close();
+<a name="l00050"></a>00050     <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00051"></a>00051 }
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="keywordtype">void</span> HtmlParser::httpDone(<span class="keywordtype">bool</span> error)
+<a name="l00054"></a>00054 {
+<a name="l00055"></a>00055     <span class="keywordflow">if</span> (error) {
+<a name="l00056"></a>00056         logger()-&gt;error(<span class="stringliteral">"Error: "</span> + http.errorString());
+<a name="l00057"></a>00057     }
+<a name="l00058"></a>00058     <span class="keywordflow">else</span>
+<a name="l00059"></a>00059     {
+<a name="l00060"></a>00060         <span class="keyword">const</span> QByteArray &amp;html = buffer-&gt;data();
+<a name="l00061"></a>00061         <span class="comment">// 解析html</span>
+<a name="l00062"></a>00062         <span class="keywordtype">int</span> ltPos = -1;     <span class="comment">// '&lt;'的位置</span>
+<a name="l00063"></a>00063         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; html.size(); ++i) {
+<a name="l00064"></a>00064             <span class="keywordflow">switch</span>(html.at(i))
+<a name="l00065"></a>00065             {
+<a name="l00066"></a>00066             <span class="keywordflow">case</span> <span class="charliteral">'&lt;'</span>:       <span class="comment">// 记录位置</span>
+<a name="l00067"></a>00067                 ltPos = i;
+<a name="l00068"></a>00068                 <span class="keywordflow">break</span>;
+<a name="l00069"></a>00069             <span class="keywordflow">case</span> <span class="charliteral">'&gt;'</span>:       <span class="comment">// 分析&lt;&gt;之间的内容</span>
+<a name="l00070"></a>00070                 <span class="keywordflow">if</span>(ltPos != -1 &amp;&amp; i &gt; (ltPos + 1)) {
+<a name="l00071"></a>00071                     parseString(html.mid(ltPos+1, i - ltPos - 1), targets);
+<a name="l00072"></a>00072                 }
+<a name="l00073"></a>00073                 <span class="keywordflow">break</span>;
+<a name="l00074"></a>00074             <span class="keywordflow">default</span>:
+<a name="l00075"></a>00075                 <span class="keywordflow">break</span>;
+<a name="l00076"></a>00076             }
+<a name="l00077"></a>00077         }
+<a name="l00078"></a>00078     }
+<a name="l00079"></a>00079     buffer-&gt;close();
+<a name="l00080"></a>00080     parsing = <span class="keyword">false</span>;
+<a name="l00081"></a>00081     <span class="comment">// 发送解析完成的信号</span>
+<a name="l00082"></a>00082     emit <a class="code" href="a00001.html#d18e302aa726419728dc3e28fafeb0cc">done</a>();
+<a name="l00083"></a>00083 }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="comment">// 解析&lt;&gt;内的内容</span>
+<a name="l00086"></a>00086 <span class="keywordtype">void</span> HtmlParser::parseString(<span class="keyword">const</span> QString &amp;str, std::vector&lt;Target&gt; &amp;targets)
+<a name="l00087"></a>00087 {
+<a name="l00088"></a>00088     <span class="comment">// 第一个元素是Tag，后面是可能的Attributes</span>
+<a name="l00089"></a>00089     QStringList tagAndAttrs = str.split(QRegExp(<span class="stringliteral">"\\s+"</span>), QString::SkipEmptyParts);
+<a name="l00090"></a>00090     <span class="keywordflow">if</span>(tagAndAttrs.size() &lt;= 1) <span class="keywordflow">return</span>;     <span class="comment">// 忽略没有Attribute的字符串</span>
+<a name="l00091"></a>00091     <span class="keywordflow">foreach</span>(<a class="code" href="a00007.html">Target</a> target, targets) {
+<a name="l00092"></a>00092         <span class="keywordflow">if</span>(tagAndAttrs[0].compare(target.<a class="code" href="a00007.html#b71afe3865e509a0d3f506540f3411a4">tag</a>, Qt::CaseInsensitive)) <span class="keywordflow">continue</span>;
+<a name="l00093"></a>00093         <span class="comment">// Tag符合，检测Attribute</span>
+<a name="l00094"></a>00094         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; tagAndAttrs.size(); ++i) {
+<a name="l00095"></a>00095             <span class="keywordtype">int</span> posOfEqual = tagAndAttrs[i].indexOf(<span class="charliteral">'='</span>);
+<a name="l00096"></a>00096             <span class="keywordflow">if</span>(posOfEqual &lt;= 0) <span class="keywordflow">continue</span>;
+<a name="l00097"></a>00097             <span class="keywordflow">if</span>(tagAndAttrs[i].left(posOfEqual).compare(target.<a class="code" href="a00007.html#64f58bdc4eea8f707d4e38d81e648e94">attr</a>, Qt::CaseInsensitive)) <span class="keywordflow">continue</span>;
+<a name="l00098"></a>00098             <span class="comment">// Attribute符合，检测后缀</span>
+<a name="l00099"></a>00099             QString value = trimQuote(tagAndAttrs[i].mid(posOfEqual + 1));
+<a name="l00100"></a>00100             <span class="keywordflow">if</span>(target.<a class="code" href="a00007.html#e1e5c588c2f1126add987b0c31153576">exts</a>.size() == 0 || endsWithAnyExt(value, target.<a class="code" href="a00007.html#e1e5c588c2f1126add987b0c31153576">exts</a>)) {
+<a name="l00101"></a>00101                 <span class="comment">// 是绝对路径</span>
+<a name="l00102"></a>00102                 <span class="keywordflow">if</span>(value.startsWith(<span class="charliteral">'/'</span>) || value.startsWith(<span class="charliteral">'\\'</span>)) {
+<a name="l00103"></a>00103                     value = host + value;
+<a name="l00104"></a>00104                 }
+<a name="l00105"></a>00105                 <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!value.startsWith(<span class="stringliteral">"http:"</span>, Qt::CaseInsensitive)) {  <span class="comment">// 是相对路径</span>
+<a name="l00106"></a>00106                     value = dir + value;
+<a name="l00107"></a>00107                 }
+<a name="l00108"></a>00108                 <span class="keywordflow">if</span>(target.<a class="code" href="a00007.html#37c630f91a9bcd24de285d11ab56cbb4" title="是否是超链接">isHyperlink</a>()) {
+<a name="l00109"></a>00109                     <span class="keywordflow">if</span>(!sameHostLink || value.startsWith(host, Qt::CaseInsensitive)) {
+<a name="l00110"></a>00110                         <span class="keywordflow">if</span>(links.indexOf(value) == -1)
+<a name="l00111"></a>00111                             links.append(value);
+<a name="l00112"></a>00112                     }
+<a name="l00113"></a>00113                 }
+<a name="l00114"></a>00114                 <span class="keywordflow">else</span> {
+<a name="l00115"></a>00115                     <span class="keywordflow">if</span>(targetUrls.indexOf(value) == -1)
+<a name="l00116"></a>00116                         targetUrls.append(value);
+<a name="l00117"></a>00117                 }
+<a name="l00118"></a>00118                 <span class="keywordflow">return</span>;     <span class="comment">// 找到后返回</span>
+<a name="l00119"></a>00119             }
+<a name="l00120"></a>00120         }
+<a name="l00121"></a>00121     }
+<a name="l00122"></a>00122 }
+<a name="l00123"></a>00123 
+<a name="l00125"></a>00125 QString HtmlParser::trimQuote(<span class="keyword">const</span> QString &amp;str)
+<a name="l00126"></a>00126 {
+<a name="l00127"></a>00127     <span class="keywordtype">int</span> first = 0, last = str.size();
+<a name="l00128"></a>00128     <span class="keywordflow">for</span>(; first &lt; last; ++first) {
+<a name="l00129"></a>00129         QChar c = str.at(first);
+<a name="l00130"></a>00130         <span class="keywordflow">if</span>(c != <span class="charliteral">' '</span> &amp;&amp; c != <span class="charliteral">'"'</span> &amp;&amp; c != <span class="charliteral">'\''</span>)
+<a name="l00131"></a>00131             <span class="keywordflow">break</span>;
+<a name="l00132"></a>00132     }
+<a name="l00133"></a>00133     <span class="keywordflow">for</span>(--last; first &lt; last; --last) {
+<a name="l00134"></a>00134         QChar c = str.at(last);
+<a name="l00135"></a>00135         <span class="keywordflow">if</span>(c != <span class="charliteral">' '</span> &amp;&amp; c != <span class="charliteral">'"'</span> &amp;&amp; c != <span class="charliteral">'\''</span>)
+<a name="l00136"></a>00136             <span class="keywordflow">break</span>;
+<a name="l00137"></a>00137     }
+<a name="l00138"></a>00138     <span class="keywordflow">return</span> str.mid(first, last - first + 1);
+<a name="l00139"></a>00139 }
+<a name="l00140"></a>00140 
+<a name="l00142"></a>00142 <span class="keywordtype">bool</span> HtmlParser::endsWithAnyExt(<span class="keyword">const</span> QString&amp; str, <span class="keyword">const</span> QStringList &amp;exts)
+<a name="l00143"></a>00143 {
+<a name="l00144"></a>00144     <span class="keywordflow">foreach</span>(QString ext, exts) {
+<a name="l00145"></a>00145         <span class="keywordflow">if</span>(!ext.startsWith(<span class="charliteral">'.'</span>))
+<a name="l00146"></a>00146             ext = <span class="charliteral">'.'</span> + ext;
+<a name="l00147"></a>00147         <span class="keywordflow">if</span>(str.endsWith(ext, Qt::CaseInsensitive))
+<a name="l00148"></a>00148             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00149"></a>00149     }
+<a name="l00150"></a>00150     <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00151"></a>00151 }
+<a name="l00152"></a>00152 
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generated at Fri May 15 20:00:03 2009 for QSimpleDownloader by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.9 </small></address>
+</body>
+</html>

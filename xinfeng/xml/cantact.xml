@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SmsCollection>
+    <SmsSum term="联系人" switch="">
+        <Sms>
+            <Number>18858290001</Number>
+            <Name>李贺</Name>
+        </Sms>
+        <Sms>
+            <Number>18858290002</Number>
+            <Name>张山</Name>
+        </Sms>
+        <Sms>
+            <Number>15589340001</Number>
+            <Name>李圣杰</Name>
+        </Sms>
+        <Sms>
+            <Number>18888888888</Number>
+            <Name>李好</Name>
+        </Sms>
+        <Sms>
+            <Number>15829820001</Number>
+            <Name>力石</Name>
+        </Sms>
+    </SmsSum>
+    <SmsSum term="白名单" switch="关闭">
+        <Sms>
+            <Number>18858291201</Number>
+            <Name>苏定方</Name>
+        </Sms>
+        <Sms>
+            <Number>18858290009</Number>
+            <Name>克利</Name>
+        </Sms>
+    </SmsSum>
+    <SmsSum term="黑名单" switch="开启">
+        <Sms>
+            <Number>18858291251</Number>
+            <Name>苏方</Name>
+        </Sms>
+        <Sms>
+            <Number>18858291234</Number>
+            <Name>宋腾</Name>
+        </Sms>
+    </SmsSum>
+</SmsCollection>

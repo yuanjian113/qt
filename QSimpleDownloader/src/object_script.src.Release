@@ -1,0 +1,13 @@
+INPUT(
+./release\HtmlParser.o
+./release\HttpGet.o
+./release\JobScheduler.o
+./release\Main.o
+./release\OptionDlg.o
+./release\QSimpleDownloader.o
+./release\moc_HtmlParser.o
+./release\moc_HttpGet.o
+./release\moc_JobScheduler.o
+./release\moc_OptionDlg.o
+./release\moc_QSimpleDownloader.o
+);

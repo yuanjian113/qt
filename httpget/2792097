@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>C++ GUI QT4编程代码 - 下载频道 - CSDN.NET</title>
+<meta name="description" content="代码啊代码代码啊代码代码啊代码代码啊代码代码啊代码代码啊代码" />
+<meta name="keywords" content="代码啊代码代码啊代码代码啊代码" />
+<meta name="author" content="CSDN" /> 
+<meta name="Copyright" content="CSDN" /> 
+<meta name="baidu-site-verification" content="5qKL5WPafahaSFtZ" />
+<link ref="canonical" href="/detail/c3060911030/2792097" />
+<link href="http://csdnimg.cn/www/images/favicon.ico" rel="SHORTCUT ICON" />
+<link href="/css/download.css" rel="stylesheet" type="text/css" />
+<script language='JavaScript' type='text/javascript' src='http://www.csdn.net/ggmm/csdn_ggmm.js'></script>
+<script language='JavaScript' type='text/javascript' src='http://www.csdn.net/js/jquery-1.4.2.min.js'></script>
+<script language='JavaScript' type='text/javascript' src='http://www.csdn.net/js/jquery.form.js'></script>
+<!-- 请置于所有广告位代码之前 -->
+<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
+</head>
+<!-- 高级接口: 可减少JS请求次数，大幅提升广告加载速度，-->
+<!-- 请置于head代码和body代码之间  -->
+<script type="text/javascript">
+
+BAIDU_CLB_preloadSlots("198890","198891","198892","198893","198894","198895","198896","212855","212857","214752");
+</script>
+<body>
+<div id="wrap">
+	<!-- public topnav -->
+	<script src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js"type="text/javascript"></script>
+	<!-- //public topnav -->
+	<div class="ad_area_1">
+		<div class="ad_w728">
+			<!-- 广告位：下载频道首页头文件上 220*90 -->
+			<script type="text/javascript">BAIDU_CLB_fillSlot("198890");</script>
+		</div>
+		<div class="ad_w220">
+			<!-- 广告位：下载频道首页头文件上 728*90 -->
+			<script type="text/javascript">BAIDU_CLB_fillSlot("198891");</script>
+		</div>
+	</div>
+	<!-- nav -->
+	<div id="nav">
+		<a href="http://download.csdn.net/" class="logo"></a>
+		<div class="nav_list">
+			<a href="http://download.csdn.net/" title="下载频道首页" class="home">首页</a>
+			<a href="http://download.csdn.net/category" class="select"><span>资源分类</span></a>
+			<a href="http://download.csdn.net/rankings" ><span>排行榜</span></a>
+			<a href="http://download.csdn.net/help" ><span>帮助</span></a>
+			<a href="http://download.csdn.net/advanced_search" ><span>高级搜索</span></a>
+		</div>
+		<div class="nav_sear">
+			<form action="http://download.csdn.net/search" method="get" onsubmit="return check_up(this);">
+			<input type="text" maxlength="50" value="" id="tagff" class="key" name="q"/>
+			</form>
+		</div>
+	</div>
+	<!-- //nav -->	<script type="text/javascript" src="/js/marquee.js"></script>
+	<!-- 导航下的广告 -->
+	<div class="ad_area_1">
+		<div class="ad_w728">
+			<!-- 广告位：下载频道首页头文件上 728*90 -->
+			<script type="text/javascript">BAIDU_CLB_fillSlot("212855");</script>
+		</div>
+		<div class="ad_w220">
+			<!-- 广告位：下载频道首页头文件上220*90  -->
+			<script type="text/javascript">BAIDU_CLB_fillSlot("212857");</script>
+		</div>
+	</div>
+	<!-- breadcrumb navigation -->
+	<div class="way_nav"><a href="/">下载频道</a><em>&gt;</em><a href="/category">资源分类</a><em>&gt;</em><a href="/category/development_technology">开发技术</a><em>&gt;</em><a href="/category/development_technology/c++">C++</a><em>&gt;</em>C++ GUI QT4编程代码</div>
+	<div class="content">
+		<!-- left area -->
+		<div class="left">
+			<div class="res_info">
+				<div class="info">
+					<h1><span><image src="/images/minetype/zip.gif" title="zip文件"></span>C++ GUI QT4编程代码</h1>
+					<ul>
+					<li>资源大小：879KB</li>
+					<li>上传日期：2010-10-28</li>
+					<li>资源积分：1分</li>
+					<li>下载次数：31</li>
+					<li>上 传 者：<a href="/user/c3060911030">c3060911030</a><a href="http://my.csdn.net/my/letter/send/c3060911030" class="send_letter" title="发私信" target="_blank"><img src="/images/btn_sendletter.gif" alt="发私信" /></a></li>
+						
+					<li>标　　签：					<a href="/tag/%E4%BB%A3%E7%A0%81%E5%95%8A%E4%BB%A3%E7%A0%81%E4%BB%A3%E7%A0%81%E5%95%8A%E4%BB%A3%E7%A0%81%E4%BB%A3%E7%A0%81%E5%95%8A%E4%BB%A3%E7%A0%81">代码啊代码代码啊代码代码啊代码</a>
+					</li>
+					<li>分 享 到：
+					<a class="weibo_sina" href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f='http://v.t.sina.com.cn/share/share.php?appkey=533284365',u=z,p=['&amp;url=',e(u),'&amp;title=',e(t||d.title),'&amp;source=',e(r),'&amp;sourceUrl=',e(l),'&amp;content=',c||'gb2312','&amp;pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','',(function(picname){if(picname.indexOf('defaultpic.gif')&gt;-1)picname='';return picname;})(''),'C++ GUI QT4编程代码   '+location.href+'    -来自CSDN','','utf-8'));" title="分享到新浪微博">
+					<img src="/images/ico_sina_weibo.gif" alt="新浪微博" /></a>
+					<a class="weibo_tx" href="javascript:(function(){window.open('http://v.t.qq.com/share/share.php?title='+encodeURIComponent('C++ GUI QT4编程代码')+'&amp;url='+encodeURIComponent(location.href)+'    -来自CSDN&amp;pic='+(function(picname){if(picname.indexOf('defaultpic.gif')&gt;-1)picname='';return picname;})(''),'_blank','width=610,height=350');})()" title="分享到QQ微博"><img src="/images/ico_tx_weibo.gif" alt="腾讯微博" /></a></li>
+<!--					<li>下　　载：<a href="http://vip.csdn.net/download.aspx?ID=2792097" class="vip" target="_blank">VIP下载</a></li> -->
+					<li class="pr">
+						<div class="fav_suc" style="display:none;"></div>
+						<a href="javascript:void(0);" id="btn_fav" class="fav">收藏</a>
+						<a href="/detail/c3060911030/2792097#comment" class="recom">评论</a>
+						<!-- <a href="mailto:webmaster@csdn.net" class="report">举报</a> -->
+						<div class="download_rep_suc" style="display:none;" ></div>
+						<a href="javascript:void(0)" class="report" id="download_report">举报</a>
+						<a href="/my/downloads" class="recom_plese">我的待评论资源</a>
+					</li>
+					</ul>
+				</div>
+				<div class="ad_300 fl">
+					<!-- 广告位：资源下载页 头文件下视窗300*250 -->
+					<script type="text/javascript">BAIDU_CLB_fillSlot("198892");</script>
+				</div>
+				<div class="bor_box_1 res_intro">
+					<h1>资源简介</h1>
+					<p>代码啊代码代码啊代码代码啊代码代码啊代码代码啊代码代码啊代码</p>
+					<div class="ad_link">
+						<ul>
+												<li><a href="http://g.csdn.net/5237659">Windows 8 平板电脑的正确“芯”选择</a></li>
+												<li><a href="http://g.csdn.net/5238176">下载IBM Netezza数据仓库设备架构</a></li>
+												<li><a href="http://g.csdn.net/5237921">点击下载并深入了解IBM云计算</a></li>
+												<li><a href="http://g.csdn.net/5237926">下载IBM System x3650 M4白皮书</a></li>
+												<li><a href="http://g.csdn.net/5238170">触控未来 点亮可能</a></li>
+												<li><a href="http://g.csdn.net/5238179">英特尔嵌入式在线培训课堂</a></li>
+												</ul>
+					</div>
+				</div>
+			</div>
+			<div class="ad_728">
+				<!-- 广告位：资源下载页 相关资源上728*90 -->
+				<script type="text/javascript">BAIDU_CLB_fillSlot("198893");</script>
+			</div>
+			<!-- res about, ad and button of download -->
+			<div class="res_down_area">
+				<div class="left">
+					<!-- res about -->
+					<div class="bor_box_1 res_about">
+						<h1>相关资源</h1>
+						<ul class="list_3">
+														 
+							<li><a href="/detail/svygh123/4845608" title="java定时执行多任务和quartz定时执行多任务">java定时执行多任务和quartz定时执行多任务</a></li>	  
+														 
+							<li><a href="/detail/zhenjinsuo/4845376" title="Java编程思想第四版教程">Java编程思想第四版教程</a></li>	  
+														 
+							<li><a href="/detail/sun1752709589/4844647" title="Eclipse最全快捷键.pdf">Eclipse最全快捷键.pdf</a></li>	  
+														 
+							<li><a href="/detail/keepthinking_/4839288" title="java核心技术(第八版)+书本源码">java核心技术(第八版)+书本源码</a></li>	  
+														 
+							<li><a href="/detail/sun1752709589/4838740" title="java 面试100题及答案.pdf">java 面试100题及答案.pdf</a></li>	  
+														 
+							<li><a href="/detail/wontson/4838484" title="C语言命语法错误大全">C语言命语法错误大全</a></li>	  
+														 
+							<li><a href="/detail/swustlizhixin/4837333" title="ARM键盘扫面代码">ARM键盘扫面代码</a></li>	  
+														 
+							<li><a href="/detail/newizan/4837103" title="HTML帮助文档">HTML帮助文档</a></li>	  
+														 
+							<li><a href="/detail/xiefy21/4836443" title="VxWork开发相关书籍合集">VxWork开发相关书籍合集</a></li>	  
+														 
+							<li><a href="/detail/xiefy21/4834383" title="C语言实战105例源码">C语言实战105例源码</a></li>	  
+														 
+							<li><a href="/detail/xiefy21/4834265" title="Linux下mp3播放器的实现">Linux下mp3播放器的实现</a></li>	  
+														 
+							<li><a href="/detail/zhenjinsuo/4832843" title="VC++深入详解">VC++深入详解</a></li>	  
+														 
+							<li><a href="/detail/li_1042237864/4826704" title="Ionic.Zip.dll  C#创建zip压缩包类库">Ionic.Zip.dll  C#创建zip压缩包类库</a></li>	  
+														 
+							<li><a href="/detail/xinber/4826700" title="MS SQLServer数据库结构读取工具">MS SQLServer数据库结构读取工具</a></li>	  
+												</ul>
+					</div>
+					<!-- hot jobs -->
+					<div class="bor_box_1 job">
+						<h1>热门招聘</h1>
+						<div id="Scroll">
+							<div id="ScrollMe">
+								<ul id="job_ul">
+								
+								</ul>
+							</div>
+						</div>
+						<script>new srcMarquee("ScrollMe",0,1,300,120,30,3000,3000,24)</script>
+						<script type="text/javascript">
+						function pongoad9(val)
+						{
+							 ch = new Array;
+							 ch = val.split("</li>");
+							 for(i=0;i<ch.length;i++){
+							  $(ch[i]).appendTo("#job_ul");
+							 }							
+							
+						}
+						</script>
+						<script type="text/javascript">
+						  var url = encodeURIComponent(location.href);
+						        var id = 9;
+						        var callbackfun="pongoad9"
+						        document.write(unescape('%3Cscript src="http://a.pongo.com.cn/Job/GetAdForCallBack%3Fid%3D'+id+'%26UrlAdParam%3D'+encodeURIComponent(url)+'%26&CallBack%3D'+callbackfun+'" type="text/javascript"%3E%3C/script%3E'));
+						</script> 
+					</div>
+					<!-- //热门招聘 -->
+				</div>
+				<!-- ad and button of download -->
+				<iframe name="iframe_data" style="display:none;"></iframe>
+								<form name="download_form" id="download_form" method="post" action="http://download.csdn.net/index.php/source/do_download/2792097/c3060911030/df240b60e00524a41b94852964c321f6" target="iframe_data">
+					<input name="ds" id="ds" type="hidden">
+				</form>
+				<div class="fl">
+					<div class="btn_download_area">
+						<span class="telecom"><a href="javascript:void(0);" title="电信下载"><img class="btndownload"  src="/images/btn_down_telecom.png" alt="电信下载" /></a></span><span class="cnc"><a href="javascript:void(0);" title="网通下载"><img class="btndownload"  src="/images/btn_down_cnc.png" alt="网通下载" /></a></span>
+						<span class="vip"><a href="http://vip.csdn.net/download.aspx?ID=2792097" title="VIP免积分下载"><img src="/images/btn_down_vip.png" alt="VIP免积分下载" /></a></span>
+												<div>下载资源需要<a href="http://passport.csdn.net/UserLogin.aspx?from=http://download.csdn.net%2Fdownload%2Fc3060911030%2F2792097" target="_blank">登录</a>，并消耗一定的积分 <a href="/help">怎样获得积分？</a></div>
+												<div class="ad_300_2">
+							<!-- 广告位：资源下载页 下载按钮上视窗300*194 -->
+							<script type="text/javascript">BAIDU_CLB_fillSlot("198894");</script>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- w728 ad -->
+			<div class="ad_728">
+				<!-- 广告位：资源下载页 FAQ上728*90 --><script type="text/javascript">BAIDU_CLB_fillSlot("198895");</script>
+			</div>
+			<!-- FAQ and agreement -->
+			<div class="bor_box_1">
+				<dl class="list_4">
+				<dt>FAQ</dt>
+				<dd class="ques">为什么我点的下载下不了,但积分却被扣了</dd>
+				<dd class="ans">由于下载人数众多,下载服务器做了并发的限制。若发现下载不了,请稍后再试,多次下载是不会重复扣分的。</dd>
+				<dd class="ques">我的积分不多了，如何获取积分？</dd>
+				<dd class="ans">上传优质资源可以获取积分，详细见 <a href="/help">积分规则</a>。
+					<br/>
+					选择完成有奖的任务，可以获取积分。 <a href="http://task.csdn.net">http://task.csdn.net</a>
+					<br/>
+					选择购买VIP会员服务，无需积分下载资源 。 <a href="http://vip.csdn.net ">http://vip.csdn.net </a>
+                    <br/>
+                    评价资源返积分： <a href="http://download.csdn.net/my/downloads">立即评价</a>
+                    <br/>
+                    第一次绑定手机，将获50下载积分及100论坛可用分。 <a href="https://passport.csdn.net/security/bindmobile">立即绑定</a>
+                    <br/>
+                    论坛可用分兑换下载积分。 <a target="_blank" href="http://bbs.csdn.net/user/resource_point_transfer">立即兑换</a>
+					</dd>
+				</dl>
+				<dl class="list_4">
+				<dt>下载资源意味着您已经同意遵守以下协议</dt>
+				<dd>1. 资源的所有权益归上传用户所有</dd>
+				<dd>2. 未经权益所有人同意，不得将资源中的内容挪作商业或盈利用途</dd>
+				<dd>3. CSDN下载频道仅提供交流平台，并不能对任何下载资源负责</dd>
+				<dd>4. 下载资源中如有侵权或不适当内容，请<script>var email='webmaster';email+='@';email+='csdn.net';document.write('<a href="javascript:void(0);" onclick="onmail();" title="'+email+'">与我们联系。</a>');</script></dd>
+				<dd>5. 本站不保证本站提供的资源的准确性、安全性和完整性, 同时也不承担用户因使用这些下载资源对自己和他人造成任何形式的伤害或损失。</dd>
+				</dl>
+			</div>
+			
+		</div>
+		<!-- right area -->
+		<div class="right">
+			<!-- public -->
+			<div class="bor_box_2">
+				<h2 class="tit_2">下载频道公告</h2>
+				<div class="public">
+									<p><a title='【专题】CSDN下载频道8.9月热门资源top100汇总' href='http://bbs.csdn.net/topics/390282292'>【专题】CSDN下载频道8.9月热门资源top100汇总</a></p>									<p><a title='【免费】解读海外市场营销奥秘' href='http://events.csdn.net/DR2012/roadshow/index.html'><font color="red">【免费】解读海外市场营销奥秘</font></a></p>									<p><a title='做任务，赢下载积分。' href='http://task.csdn.net/ '>做任务，赢下载积分。</a></p>								</div>
+			</div>
+			<!-- button upload -->
+			<div class="upload_res_right"><a href="/upload" title="上传资源"></a></div>
+			<!-- hot tag weekly -->
+			<div class="bor_box_2">
+				<h2 class="tit_2">本周热点资源</h2>
+				<ul class="list_2">
+												 
+					<li><a href="/detail/xiefy21/4834383" title="C语言实战105例源码">C语言实战105例源码</a></li>	  
+												 
+					<li><a href="/detail/liujun13579/4826418" title="Android任务驱动式教程.pdf">Android任务驱动式教程.pdf</a></li>	  
+												 
+					<li><a href="/detail/zhousiwei/4824991" title="android面试题[各大公司面试]">android面试题[各大公司面试]</a></li>	  
+												 
+					<li><a href="/detail/liujun13579/4826481" title="Linux开发工具箱--项目开发的最有效途径.pdf">Linux开发工具箱--项目开发的最有效途径.pdf</a></li>	  
+												 
+					<li><a href="/detail/jake443403168/4837457" title="Linux学习讲稿">Linux学习讲稿</a></li>	  
+												 
+					<li><a href="/detail/keepthinking_/4839288" title="java核心技术(第八版)+书本源码">java核心技术(第八版)+书本源码</a></li>	  
+												 
+					<li><a href="/detail/yanggangqiang520/4832546" title="黑客入门新手特训">黑客入门新手特训</a></li>	  
+												 
+					<li><a href="/detail/lx76939412/4834576" title="50个非常有价值的简历模板">50个非常有价值的简历模板</a></li>	  
+												 
+					<li><a href="/detail/zhenjinsuo/4832843" title="VC++深入详解">VC++深入详解</a></li>	  
+												 
+					<li><a href="/detail/wontson/4838484" title="C语言命语法错误大全">C语言命语法错误大全</a></li>	  
+								</ul>
+			</div>
+			<!-- hot Tag -->
+			<div class="bor_box_2">
+				<h2 class="tit_2">开发技术热门Tag</h2>
+				<ul class="hot_tag">
+												 
+					<li><a href="/tag/c%2B%2B" title="c++">c++</a></li>	  
+												 
+					<li><a href="/tag/mfc" title="mfc">mfc</a></li>	  
+												 
+					<li><a href="/tag/vc" title="vc">vc</a></li>	  
+												 
+					<li><a href="/tag/vc%2B%2B" title="vc++">vc++</a></li>	  
+												 
+					<li><a href="/tag/windows" title="windows">windows</a></li>	  
+												 
+					<li><a href="/tag/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" title="数据结构">数据结构</a></li>	  
+												 
+					<li><a href="/tag/visual" title="visual">visual</a></li>	  
+												 
+					<li><a href="/tag/qt" title="qt">qt</a></li>	  
+												 
+					<li><a href="/tag/opencv" title="opencv">opencv</a></li>	  
+												 
+					<li><a href="/tag/%E6%BA%90%E7%A0%81" title="源码">源码</a></li>	  
+								</ul>
+			</div>
+			<!-- right ad w:220px h:90px -->
+			<div class="ad">
+<!-- 广告位：资源下载页 页中220*90 -->
+<script type="text/javascript">BAIDU_CLB_fillSlot("198896");</script>
+			</div>
+			<!-- uploader other res -->
+						<div class="bor_box_2">
+				<h2 class="tit_2">上传者其他资源</h2>
+				<ul class="list_2">
+												 
+					<li><a href="/detail//3020822" title="马里奥桌面主题exe安装包">马里奥桌面主题exe安装包</a></li>	  
+												 
+					<li><a href="/detail//2759514" title="QT4中文手册.pdf">QT4中文手册.pdf</a></li>	  
+												 
+					<li><a href="/detail//2440192" title="基于VB与SQL的公交线路查询系统">基于VB与SQL的公交线路查询系统</a></li>	  
+								</ul>
+			</div>
+					</div>
+	</div>
+	
+<!-- pop add org -->
+<div id="pop_add_org" class="pop" style="display:none;">
+	<h1><a href="javascript:void(0)" title="关闭" class="close" onclick="close_report()"><img src="/images/ico_close.gif" alt="关闭" /></a>举报</h1>
+	<div class="con">
+		<form id="reportform" name="certificateform" action="/index.php/report/do_add_report" enctype="multipart/form-data" method="post" >
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_1">
+		<colgroup><col width="120" /><col /></colgroup>
+		<input type="hidden" id="source_id" name="source_id" value="2792097"></input>
+		<input type="hidden" id="report_username" name="report_username" value=""></input>
+		<input type="hidden" id="to_username" name="to_username" value="c3060911030"></input>
+		<tr>
+		<span style="color:red;">若举报审核通过，可奖励20下载分</span>
+		</tr>
+		<tr>
+		<th>举报人：</th>
+		<td></td>
+		</tr>
+		<tr>
+		<th>被举报人：</th>
+		<td>c3060911030</td>
+		</tr>
+		<tr>
+		<th>举报的资源分：</th>
+		<td>1</td>
+		</tr>
+		<tr>
+		<th><span style="color:red;">*</span> 类型：</th>
+		<td>
+			<select name="report_type" id="report_type" style="font-size:12px">
+			<option style="font-size:12px">请选择类型</option>
+			<option style="font-size:12px">资源无法下载</option>
+			<option style="font-size:12px">资源无法使用</option>
+			<option  style="font-size:12px">标题与实际内容不符</option>
+			<option  style="font-size:12px">含有危害国家安全内容</option>
+			<option  style="font-size:12px">含有反动色情等内容</option>
+			<option  style="font-size:12px">含广告内容</option>
+			<option  style="font-size:12px">版权问题，侵犯个人或公司的版权</option>
+			<option  style="font-size:12px">其他</option>
+			</select>	<span id="report_type_error" style="color:red;"></span>	</td>
+		</tr>
+		<!-- 当选择侵权类型的时候，显示这一段 -->
+		<tr id="infringe" style="display:none;">
+		<th valign="top">&nbsp;</th>
+		<td> 请您提供公司营业执照和软件相关版权到<a href="mailto:webmaster@csdn.net">webmaster@csdn.net </a></td>
+		</tr>
+		<!-- //当选择侵权类型的时候，显示这一段 -->
+		<tr>
+		<th valign="top"><span style="color:red;">*</span> 详细原因：</th>
+		<td><textarea name="report_description" id="report_description" cols="" rows=""></textarea>			<span style="color:red" id="report_description_error"></span>			</td>
+		</tr>
+		</table>
+		<div class="btn_area_1">
+			<a href="javascript:void(0);" class="btn_2" onclick="submit_report()"><span>提交</span></a><a href="javascript:void(0)" class="btn_3" onclick="close_report()"><span>取　消</span></a>
+		</div>
+		</form>
+	</div>
+</div>
+<!-- //jump windows -->
+
+<!-- 未登录弹窗 -->
+<div id="pop_login" class="pop" style="display:none;">
+	<div class="con">
+		<a href="javascript:void(0);" class="close"></a>
+		<p>您还没有登录！<a href="javascript:void(0);" id="userlogin">登录</a>　　<a href="javascript:void(0);" id="userregister">注册</a></p>
+		<dl>
+		</dl>
+	</div>
+</div>
+<!-- //未登录弹窗 -->
+<!-- 积分不够弹窗 -->
+<div id="pop_not_enough" class="pop" style="display:none;">
+	<div class="con">
+		<a href="javascript:void(0);" class="close"></a>
+		<p>您目前的积分不够下载该资源</p>
+		<dl>
+		</dl>
+	</div>
+</div>
+<!-- //积分不够弹窗 -->
+
+<!-- 先来了解弹窗 -->
+<div id="pop_understand" class="pop" style="display:none;">
+	<div class="con">
+		<a href="#" class="close"></a>
+                <p>积分不够，先来了解</p>
+        		<dl>
+		</dl>
+	</div>
+</div>
+<!-- //先来了解弹窗 -->
+
+<!-- 非VIP用户弹窗 -->
+<div id="pop_down_repeat" class="pop" style="display:none;" >
+	<div class="con">
+		<a href="#" class="close"></a>
+		<p>您已经下载过该资源，再次下载不需要扣除积分 <a id="download_btn" href="javascript:void(0);" class="btn_2"><span>下载</span></a></p>
+	</div>
+</div>
+<!-- //非VIP用户弹窗 -->
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$('#btn_report').click(function(){
+				if(confirm('您还没登录!')){
+			window.location.href = "http://passport.csdn.net/UserLogin.aspx?from=http://download.csdn.net%2Fdownload%2Fc3060911030%2F2792097";
+			return false;
+		}else{
+			return false;
+		}
+		 
+	});
+	$('#btn_fav').click(function(){
+				if(confirm('您还没登录!')){
+			window.location.href = "http://passport.csdn.net/UserLogin.aspx?from=http://download.csdn.net%2Fdownload%2Fc3060911030%2F2792097";
+			return false;
+		}else{
+			return false;
+		}
+			});
+	var  user_score = 0;
+    
+    $(".btndownload").click(function(){
+
+        var line = $(this).attr('alt');
+        if(line == '电信下载')
+        {
+            $("#ds").val('dx');
+        }
+        if(line == '网通下载')
+        {
+            $("#ds").val('wt');
+        }
+
+        var template_one = '<dt>怎么快速获得积分？</dt>';
+        var template_two = '<dd><a target="_blank" href="http://u.download.csdn.net/upload">传资源赚积分</a>　　　<a target="_blank" href="http://download.csdn.net/my/downloads">评价资源返积分</a></dd>';
+        var template_three = '<dd><a target="_blank" href="http://vip.csdn.net/">VIP免积分下载</a>　　 <a target="_blank" href="http://task.csdn.net">完成任务送积分</a></dd>';
+        var template_four = '<dd><a target="_blank" href="https://passport.csdn.net/security/bindmobile">绑定手机送积分</a>　　<a target="_blank" href="http://forum.csdn.net/PointForum/Forum/PointExchange.aspx">论坛可用分兑换</a></dd>';
+        var pop_template = template_one + template_two + template_three + template_four;
+
+        if("c3060911030" == "")
+        {
+            document.download_form.submit();
+            return false;
+        }
+
+  		            $('#pop_login').find('dl').html(pop_template);
+            $('#pop_login').css('position','fixed').show();
+            return false;
+		    });    
+
+    // submit button
+    $('#download_btn').click(function(){
+        document.download_form.submit();
+        $('#pop_down_repeat').hide();
+    });
+
+    // submit button2
+    $('#download_btn2').click(function(){
+        document.download_form.submit();
+        $('#pop_understand').hide();
+    });
+
+    // close pop
+    $('.close').click(function(){
+        $(this).parents('.pop').hide();
+    });
+
+    // user login
+    $('#userlogin').click(function(){
+        window.location.href = "http://passport.csdn.net/UserLogin.aspx?from=http://download.csdn.net%2Fdownload%2Fc3060911030%2F2792097";
+    });
+
+    // user register
+    $('#userregister').click(function(){
+        window.location.href = "http://passport.csdn.net/account/register";
+    });
+		  
+	$('#download_report').click(function(){
+		$.post("/index.php/report/select_report", { "id":"2792097" },function(data){
+			if (data.succ == -1) {
+				if(confirm('您还没登录!')){
+					window.location.href = "http://passport.csdn.net/UserLogin.aspx?from=http://download.csdn.net%2Fdownload%2Fc3060911030%2F2792097";
+					return false;
+				}else{
+					return false;
+				}
+			} else if(data.succ == 2) {
+				$('.download_rep_suc').html('<span class="arrow"></span>资源已经被举报，无需重复举报');
+				$('.download_rep_suc').slideDown('slow');
+				setTimeout(function(){$('.download_rep_suc').slideUp('slow')},3000);
+			} else {
+				$("#pop_add_org").css("display","inline-block");
+			}	
+		}, "json");
+	});
+	
+			
+});
+
+    // get cookie
+    function get_cookie(name)
+    {
+        var search = name + '=';
+        if(document.cookie.length > 0)
+        {
+            offset = document.cookie.indexOf(search);
+            if(offset != 1)
+            {
+                offset += search.length;
+                end = document.cookie.indexOf(';',offset);
+                if(end == -1)
+                {
+                    end = document.cookie.length;
+                }
+                return unescape(document.cookie.substring(offset,end));
+            }
+            else
+            {
+                return '';
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
+
+	function close_report(){
+		$("#pop_add_org").css("display","none");
+	}
+	function submit_report(){
+		
+		var $report_type=	$("#report_type").val();
+		var $report_description= $("#report_description").val();
+		var num=0;
+
+		if($report_type == '请选择类型'){
+			num=num+1;
+			$("#report_type_error").html("举报原因");
+			return false;
+		}else{
+			$("#report_type_error").html('');
+
+		}
+
+		if($report_description == ''){
+			num=num+1;
+			$("#report_description_error").html("描述不能为空");
+			return false;
+		}else{
+		 $("#report_description_error").html("");
+			
+		}
+				if(num == 0){
+				xhr = $('#reportform').ajaxSubmit({
+					dataType: 'json',
+					beforeSubmit: function(a,f,o) {
+					
+					},
+					error:function(data,s,e)
+					{
+						alert(e);					
+					},
+					success: function(data) {
+						if(data.succ==-1){
+								alert("请先登录");
+							}
+
+						if(data.succ==1)
+							{						
+								alert("举报成功");			
+								close_report();					
+								return true;		
+								}
+
+						if(data.succ==2){						
+								alert("已举报");
+								}
+										return false;
+					}
+
+				});
+				}
+		}
+
+	$("#report_type").change(function(){
+				if($(this).val() == "版权问题，侵犯个人或公司的版权"){
+								$("#infringe").css("display","");
+				}else{
+								$("#infringe").css("display","none");
+				}
+		})
+
+	</script>
+
+<!-- 计数  -->
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=159 border=0 width=0 height=0>");
+function onmail(){
+	var email='webmaster';email+='@';email+='csdn.net';
+	window.location.href="mailto:"+email;
+}
+</script>
+<!-- 广告位：鸿媒体广告位  百度TV方式的广告，右下弹窗模式
+<script type="text/javascript" >BAIDU_CLB_SLOT_ID = "214752";</script>
+<script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+-->
+<script type="text/javascript">BAIDU_CLB_fillSlot("388486");</script>
+
+<script src="http://z.csdn.net/ztest/js/count.js" type="text/javascript"></script>
+	<!-- public footer -->
+	<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+	<script src="http://csdnimg.cn/pubfooter/js/publib_footer.js"type="text/javascript"></script>
+	<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-download.js"></script>
+	
+	<!-- //public footer -->
+</div>
+<script type="text/javascript">
+	function setTab(m,n){
+		var tli=document.getElementById("menu"+m).getElementsByTagName("a");
+		var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+		for(i=0;i<tli.length;i++){
+			tli[i].className=i==n?"current1 current2":"";
+			mli[i].style.display=i==n?"block":"none";
+		}
+	}
+
+	function check_up(thisform){
+		var key=$.trim(thisform.q.value);
+		if(key==""){
+			alert("关键字不能为空！");
+		}
+		else{
+			//key=key.replace(/\+/g,"%2B").replace(/\//g,"%2F");
+			key =  encodeURIComponent(key)
+			var url="http://download.csdn.net/search?q="+key;
+			window.location.href=url;
+		}
+		return false;
+	}
+
+</script>
+</body>
+</html>

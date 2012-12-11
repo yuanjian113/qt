@@ -1,0 +1,23 @@
+<?xml version="1.0"  encoding="gb2312"?>
+<targets>
+	<target desc="Flash" selected="false">
+		<tag>embed</tag>
+		<attr>src</attr>
+		<exts>.swf</exts>
+	</target>
+	<target desc="Image" selected="false">
+		<tag>img</tag>
+		<attr>src</attr>
+		<exts>.jpg;.jpeg;.bmp</exts>
+	</target>
+	<target desc="Image Link" selected="false">
+		<tag>a</tag>
+		<attr>href</attr>
+		<exts>.jpg;.jpeg;.bmp</exts>
+	</target>
+	<target desc="MP3" selected="false">
+		<tag>a</tag>
+		<attr>href</attr>
+		<exts>.mp3;.rm</exts>
+	</target>
+</targets>
